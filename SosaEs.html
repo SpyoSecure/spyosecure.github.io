@@ -140,3 +140,24 @@
       <a href="https://discord.gg/DfTF66mgnz">Servidor de Discord de /fades</a>
 		</button>
 	</div>
+
+
+  <script>
+    const disabledKeys = [67, 73, 85, 88]; // keys code that will be disabled
+  
+    const showAlert = e => {
+      e.preventDefault(); // preventing its default behaviour
+      return alert("Lo sentimos, el contenido de nuestro sitio web está protegido.");
+    }
+  
+    document.addEventListener("contextmenu", e => {
+      showAlert(e); // calling showAlert() function on mouse right click
+    });
+  
+    document.addEventListener("keydown", e => {
+      // calling showAlert() function, if the pressed key matched to disabled keys
+      if(e.ctrlKey && disabledKeys.includes(e.keyCode)) {
+        showAlert(e);
+      }
+    });
+  </script>
