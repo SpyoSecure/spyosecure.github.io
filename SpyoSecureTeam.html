@@ -1,93 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/css/Card.css">
-  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
   <title>SpyoSecure Team</title>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
 </head>
 <body>
-  <div class="box">
-      <div class="card">
-        <div class="imgBx">
-            <img src="https://cdn.discordapp.com/attachments/945407646683496449/980801507177938974/SPY0SECURE.png" alt="images">
-        </div>
-        <div class="details">
-            <h2>SpyoSecure<br><span>Owner</span></h2>
-        </div>
+
+<div class="about-section">
+  <h1>The internet is a vast and ever-changing place, and with the rapid expansion of technology, it can be difficult to keep your information and data safe.</h1>
+  <h1>That's where SpyoSecure comes in. Our online security service provides round-the-clock protection for your devices and information, so you can rest assured that your data is safe and secure.</h1>
+  <h1>With SpyoSecure, you can browse the internet with confidence and peace of mind.</h1>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.discordapp.com/attachments/945407646683496449/980801507177938974/SPY0SECURE.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>SpyoSecure</h2>
+        <p class="title">CEO & Owner</p>
+        <p>spyosecureantvirus@gmail.com</p>
       </div>
-    
-       <div class="card">
-         <div class="imgBx">
-            <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768660648701972/PSYCHOSHADOW.gif" alt="images">
-         </div>
-         <div class="details">
-            <h2>PSYCHOツSHADOW<br><span>Website Developer</span></h2>
-          </div>
-       </div>
-
-       <div class="card">
-         <div class="imgBx">
-            <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768650653683712/BlackyForever65.png" alt="images">
-         </div>
-         <div class="details">
-            <h2>BlackyForever65<br><span>Manager</span></h2>
-          </div>
-       </div>
-
-       <div class="card">
-        <div class="imgBx">
-           <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768683457318912/Raz.png" alt="images">
-        </div>
-        <div class="details">
-           <h2>Raz<br><span>Admin And Spanish translator</span></h2>
-         </div>
-      </div>
-
-      <div class="card">
-        <div class="imgBx">
-           <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768678050861087/VxidLxrd.png" alt="images">
-        </div>
-        <div class="details">
-           <h2>VxidLxrd<br><span>Helper And Spanish translator</span></h2>
-         </div>
-      </div>
-
-      <div class="card">
-         <div class="imgBx">
-            <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1041118822263947264/FrEzyX.png" alt="images">
-         </div>
-         <div class="details">
-            <h2>FrEzyX<br><span>Designer</span></h2>
-          </div>
-       </div>
- 
+    </div>
   </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768660648701972/PSYCHOSHADOW.gif" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>PSYCHOツSHADOW</h2>
+        <p class="title">Website Developer</p>
+        <p>spyosecureantvirus@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768650653683712/BlackyForever65.png" alt="John" style="width:100%">
+      <div class="container">
+        <h2>BlackyForever65</h2>
+        <p class="title">Manager</p>
+        <p>spyosecureantvirus@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768683457318912/Raz.png" alt="John" style="width:100%">
+    <div class="container">
+      <h2>Raz</h2>
+      <p class="title">Admin And Spanish translator</p>
+      <p>spyosecureantvirus@gmail.com</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1018768678050861087/VxidLxrd.png" alt="John" style="width:100%">
+    <div class="container">
+      <h2>VxidLxrd</h2>
+      <p class="title">Helper And Spanish translator</p>
+      <p>spyosecureantvirus@gmail.com</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="https://cdn.discordapp.com/attachments/1018768608362512385/1041118822263947264/FrEzyX.png" alt="John" style="width:100%">
+    <div class="container">
+      <h2>FrEzyX</h2>
+      <p class="title">Designer</p>
+      <p>spyosecureantvirus@gmail.com</p>
+    </div>
+  </div>
+</div>
+</div>
+
 </body>
 </html>
-
-
-
-
-
-<script>
-   const disabledKeys = [67, 73, 85, 88]; // keys code that will be disabled
- 
-   const showAlert = e => {
-     e.preventDefault(); // preventing its default behaviour
-     return alert("Sorry, our website content is protected");
-   }
- 
-   document.addEventListener("contextmenu", e => {
-     showAlert(e); // calling showAlert() function on mouse right click
-   });
- 
-   document.addEventListener("keydown", e => {
-     // calling showAlert() function, if the pressed key matched to disabled keys
-     if(e.ctrlKey && disabledKeys.includes(e.keyCode)) {
-       showAlert(e);
-     }
-   });
- </script>
