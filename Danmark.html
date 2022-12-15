@@ -39,7 +39,15 @@
     <link rel="stylesheet" href="assets/css/dark.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/PhoneFriendly.css">
+    
+    <style>
+        .safe {
+          color: green;
+        }
+        .unsafe {
+          color: red;
+        }
+      </style>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -239,6 +247,11 @@
                                 <i class="bx bx-user"></i>
                             Statistik om cybertrusler
                             </a>
+
+                    <p>Indtast URL adressen på den hjemmeside, der skal scannes:</p>
+                    <input type="text" id="url" placeholder="https://example.com">
+                    <button onclick="scanWebsite()">Scan</button>
+                    <p id="result"></p>  
                             
                         </div>
                     </div>
@@ -687,6 +700,34 @@
 
 
     <!-- Jquery Min JS -->
+    <script>
+        function scanWebsite() {
+          // Get the URL from the input field
+          var url = document.getElementById("url").value;
+  
+          // Check if the URL is on the safe websites list
+          if (safeWebsites.includes(url)) {
+            // Display a message indicating that the website is safe
+            document.getElementById("result").innerHTML =
+              "<span class='safe'>✅ Denne hjemmeside er sikker.</span>";
+          } else {
+            // Display a message indicating that the website is not safe
+            document.getElementById("result").innerHTML =
+              "<span class='unsafe'>❌ Denne hjemmeside er ikke sikker.</span>";
+          }
+        }
+  
+        // List of safe websites
+        var safeWebsites = ["https://google.com", "google.com", "https://example.com", "example.com", "https://spyosecure.xyz",
+        "spyosecure.xyz", "https://www.youtube.com", "youtube.com", "https://discord.com", "discord.com", "https://www.deepl.com",
+        "https://www.deepl.com/translator", "deepl.com", "https://www.instagram.com", "instagram.com", "https://twitter.com",
+        "twitter.com", "https://www.bleepingcomputer.com", "bleepingcomputer.com", "https://thehackernews.com", "thehackernews.com",
+        "https://github.com", "github.com", "https://steamcommunity.com", "steamcommunity.com", "https://store.steampowered.com",
+        "store.steampowered.com", "steampowered.com", "https://open.spotify.com", "open.spotify.com", "https://spotify.com", 
+        "spotify.com", "https://ds-vpn.com", "ds-vpn.com"];
+      </script>
+
+
     <script>
         const disabledKeys = [67, 73, 85, 88]; // keys code that will be disabled
       
