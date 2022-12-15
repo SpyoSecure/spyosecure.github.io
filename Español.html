@@ -251,9 +251,9 @@
                                 Estadísticas de amenazas cibernéticas
 								</a>
 
-                     <p>Enter the URL of a website to scan:</p>
+                     <p>Introduzca la URL de un sitio web para escanear:</p>
                     <input type="text" id="url" placeholder="https://example.com">
-                    <button onclick="scanWebsite()">Scan</button>
+                    <button onclick="scanWebsite()">Escanear</button>
                     <p id="result"></p> 
 
                         </div>
@@ -716,11 +716,11 @@
           if (safeWebsites.includes(url)) {
             // Display a message indicating that the website is safe
             document.getElementById("result").innerHTML =
-              "<span class='safe'>✅ This website is safe.</span>";
+              "<span class='safe'>✅ Este sitio web es seguro.</span>";
           } else {
             // Display a message indicating that the website is not safe
             document.getElementById("result").innerHTML =
-              "<span class='unsafe'>❌ This website is not safe.</span>";
+              "<span class='unsafe'>❌ Este sitio web no es seguro.</span>";
           }
         }
   
@@ -731,7 +731,10 @@
         "twitter.com", "https://www.bleepingcomputer.com", "bleepingcomputer.com", "https://thehackernews.com", "thehackernews.com",
         "https://github.com", "github.com", "https://steamcommunity.com", "steamcommunity.com", "https://store.steampowered.com",
         "store.steampowered.com", "steampowered.com", "https://open.spotify.com", "open.spotify.com", "https://spotify.com", 
-        "spotify.com", "https://ds-vpn.com", "ds-vpn.com"];
+        "spotify.com", "https://ds-vpn.com", "ds-vpn.com", "https://www.apple.com", "apple.com", "https://www.samsung.com/", 
+        "samsung.com", "https://www.tesla.com", "tesla.com", "https://www.spacex.com", "spacex.com", "epicgames.com",
+        "https://store.epicgames.com", "store.epicgames.com", "https://code.visualstudio.com", "code.visualstudio.com",
+        "visualstudio.com", "https://visualstudio.microsoft.com", "visualstudio.microsoft.com"];
       </script>
 
 
