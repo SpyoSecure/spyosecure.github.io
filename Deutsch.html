@@ -41,11 +41,11 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     
     <style>
-        .safe {
-          color: green;
-        }
         .unsafe {
-          color: red;
+            color: red;
+        }
+        .safe {
+            color: green;
         }
       </style>
 
@@ -764,77 +764,70 @@
           // Get the URL from the input field
           var url = document.getElementById("url").value;
   
-          // Check if the URL is on the safe websites list
-          if (safeWebsites.includes(url)) {
-            // Display a message indicating that the website is safe
-            document.getElementById("result").innerHTML =
-              "<span class='safe'>✅ Diese Website ist sicher.</span>";
-          } else {
+          // Check if the URL is on the Scam websites list
+          if (ScamWebsites.includes(url)) {
             // Display a message indicating that the website is not safe
             document.getElementById("result").innerHTML =
-              "<span class='unsafe'>❌ Diese Website ist nicht sicher.</span>";
+            "<span class='unsafe'>❌ Diese Website ist nicht sicher.</span>";
+        } else {
+            // Display a message indicating that the website is safe
+            document.getElementById("result").innerHTML =
+            "<span class='safe'>✅ Diese Website ist sicher.</span>";
           }
         }
   
-        // List of safe websites
-        var safeWebsites = ["https://google.com", "google.com", "https://example.com", "example.com", "https://spyosecure.xyz",
-
-        "spyosecure.xyz", "https://www.youtube.com", "youtube.com", "https://discord.com", "discord.com", "https://www.deepl.com",
-
-        "https://www.deepl.com/translator", "deepl.com", "https://www.instagram.com", "instagram.com", "https://twitter.com",
-
-        "twitter.com", "https://www.bleepingcomputer.com", "bleepingcomputer.com", "https://thehackernews.com", "thehackernews.com",
-
-        "https://github.com", "github.com", "https://steamcommunity.com", "steamcommunity.com", "https://store.steampowered.com",
-
-        "store.steampowered.com", "steampowered.com", "https://open.spotify.com", "open.spotify.com", "https://spotify.com", 
-
-        "spotify.com", "https://ds-vpn.com", "ds-vpn.com", "https://www.apple.com", "apple.com", "https://www.samsung.com/", 
-
-        "samsung.com", "https://www.tesla.com", "tesla.com", "https://www.spacex.com", "spacex.com", "epicgames.com",
-
-        "https://store.epicgames.com", "store.epicgames.com", "https://code.visualstudio.com", "code.visualstudio.com",
-
-        "visualstudio.com", "https://visualstudio.microsoft.com", "visualstudio.microsoft.com", "https://neverlose.cc",
-
-        "neverlose.cc", "https://gamesense.pub", "gamesense.pub", "skeet.cc", "https://www.onetap.com", "onetap.com", 
-
-        "https://aimware.net", "aimware.net", "https://pandora.gg", "pandora.gg", "https://primordial.dev", "primordial.dev",
-
-        "https://fatality.win", "fatality.win", "https://stand.gg", "stand.gg", "https://millionware.vip", "millionware.vip",
-
-        "https://memesense.gg", "memesense.gg", "https://midnight.im", "midnight.im", "https://imxnoobx.xyz",
-
-        "imxnoobx.xyz", "https://www.fiverr.com", "fiverr.com", "https://realboost.me", "realboost.me", "https://Google.com",
-
-        "Google.com", "https://torguard.net", "torguard.net", "https://nordvpn.com", "nordvpn.com", "https://socialblade.com",
-
-        "socialblade.com", "https://www.porsche.com", "porsche.com", "https://www.bitdefender.com", "bitdefender.com", 
-
-        "https://www.f-secure.com", "f-secure.com", "https://www.kaspersky.com", "kaspersky.com", "https://norton.com",
-        
-        "norton.com", "https://id-ransomware.malwarehunterteam.com", "id-ransomware.malwarehunterteam.com",
-        
-        "https://malwarehunterteam.com", "malwarehunterteam.com", "https://www.nortonlifelock.com", "nortonlifelock.com",
-        
-        "https://www.trustpilot.com", "trustpilot.com", "https://translate.google.com", "translate.google.com",
-        
-        "https://gyazo.com", "gyazo.com", "https://www.teamviewer.com", "teamviewer.com", "https://www.microsoft.com",
-        
-        "microsoft.com", "https://www.twitch.tv", "twitch.tv", "https://www.facebook.com", "facebook.com", "https://obsproject.com",
-
-        "obsproject.com", "https://www.nvidia.com", "nvidia.com", "https://medal.tv", "medal.tv", "https://www.sophos.com",
-        
-        "sophos.com", "https://home.sophos.com", "home.sophos.com", "https://www.mcafee.com", "mcafee.com", 
-        
-        "https://www.malwarebytes.com", "malwarebytes.com", "https://www.hitmanpro.com", "hitmanpro.com",
-        
-        "https://www.avast.com", "avast.com", "https://www.avg.com", "avg.com", "https://distrokid.com", "distrokid.com",
-        
-        "https://mail.google.com", "mail.google.com", "https://dbytes.org", "https://www.torrentleech.org", "torrentleech.org",
-        
-        "https://www.rapidtables.com", "rapidtables.com"];
-      </script>
+ // List of Scam websites
+ var ScamWebsites = ["https://freedomgiveaway.net", "freedomgiveaway.net",
+ "101nitro.com", "http://ww38.101nitro.com", "1111sale.us", "https://1111sale.us", "http://15dfjkbvdf.club", "15dfjkbvdf.club", "17ebook.com",
+ 
+ "http://www1.17ebook.com", "1month-premium.com", "https://1month-premium.com", "1nitro.club",
+ 
+ "https://1nitro.club", "1ownandfresh1.com", "https://ww16.1ownandfresh1.com", "1payxperxinst1.com", "https://1payxperxinst1.com", "1redirb.com",
+ 
+ "https://1redirb.com", "https://ww25.1redirb.com", "adalgard-wol.com", "adating.link",
+ 
+ "zvideo-live.com", "https://simcast.com", "streamcommunits.ru", "http://streamcommunits.ru", "streamcommunitty.ru.com", "https://streamcommunitty.ru.com",
+ 
+ "streamcommunitu.com", "https://streamcommunitu.com", "streamcommunitv.me", "https://streamcommunitv.me", "streamcommunitv.net", "https://streamcommunitv.net",
+ 
+ "streamcommunity-user.me", "https://streamcommunity-user.me", "streamcommunity.com.ru",
+ 
+ "http://streamcommunity.com.ru", "zoneforyourprize.life", "https://ww1.zoneforyourprize.life",
+ 
+ "zondervirus.nl", "https://zondervirus.nl", "youtubeshort.watch", "https://youtubeshort.watch", "youtuba.com", "https://ww1.youtuba.com",
+ 
+ "your-bonus.ecl8hr4lalq5.top", "https://your-bonus.ecl8hr4lalq5.top", "your-dreams-girls2.com", "http://ww38.your-dreams-girls2.com",
+ 
+ "http://adating.link", "discocrd.com", "http://ww9.discocrd.com",
+ 
+ "discod.tech", "http://discod.tech", "discodapp.com", "http://ww25.discodapp.com", "discord-drop.info", "http://discord-drop.info",
+ 
+ "discord-drops.xyz", "http://discord-drops.xyz", "ur-l.me", "https://simcast.com", "v-roblox.com",
+ 
+ "http://v-roblox.com", "v2013.ru", "http://v2013.ru", "valve-nitro.xyz", "https://valve-nitro.xyz", "vid-adblocker.com",
+ 
+ "https://vid-adblocker.com", "vitality-playtime.com", "https://vitality-playtime.com", "vote-academymod.com", "https://vote-academymod.com",
+ 
+ "vote-moderator.com", "http://vote-moderator.com", "web-discord.com", "http://web-discord.com", "https://disccrdpremium.com/egiftfreesteamnitro",
+ 
+ "disccrdpremium.com", "msi-afterburner--download.site", "https://msi-afterburner--download.site",
+ 
+ "msi-afterburner-download.site", "http://msi-afterburner-download.site", "msi-afterburner-download.tech", "http://msi-afterburner-download.tech",
+ 
+ "msi-afterburner-download.online", "http://msi-afterburner-download.online", "msi-afterburner-download.store", "https://msi-afterburner-download.store",
+ 
+ "msi-afterburner-download.ru", "https://msi-afterburner-download.ru", "msi-afterburner.download", "http://msi-afterburner.download",
+ 
+ "mslafterburners.com", "http://mslafterburners.com", "msi-afterburnerr.com", "http://msi-afterburnerr.com", "https://clay.party/", "clay.party",
+ 
+ "https://turompecabezas.xyz", "turompecabezas.xyz", "https://mega.nz/file/LKAngKTD#ez0Zzzt4GyMFLBiVS_9MtIYyFZpsyQjzfq8T0uy_wXI",
+ 
+ "https://discoldgiftss.ru/reg", "https://discoldgiftss.ru", "discoldgiftss.ru", "https://discorclgift.ru/nitro",
+ 
+ "https://discorclgift.ru", "https://discorclgift.ru", "discorclgift.ru", "https://app-gift.ru/discord/nitro/reg", 
+ 
+ "https://app-gift.ru", "app-gift.ru"];
+</script>
 
 
     <script>
