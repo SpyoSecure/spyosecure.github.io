@@ -48,6 +48,31 @@
             color: green;
         }
       </style>
+
+<style>
+    .glowing-text {
+      color: white;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 30px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+      animation: glowing 2s ease-in-out infinite;
+    }
+    @keyframes glowing {
+      0% { text-shadow: 0 0 10px #fff; }
+      50% { text-shadow: 0 0 20px #228DFF; }
+      100% { text-shadow: 0 0 10px #fff; }
+    }
+  </style>
+
+  <style>
+  /* CSS code */
+  video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+</style>
   
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
@@ -209,6 +234,10 @@
   <!-- DONATION-->
 <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="spyosecure" data-description="Support me on Buy me a coffee!" data-message="¡Gracias por su visita! Por favor, dónenos para ayudarnos a agrandar nuestro proyecto." data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
+
+<video src="firework.mp4" autoplay muted loop></video>
+<!-- Other page content goes here -->
+
    <!-- Start Banner Area -->
    <section class="banner-area-six">
        <div class="container-fluid">
@@ -222,6 +251,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="banner-text"> 
+                        <h1 class="glowing-text">Feliz año nuevo</h1>
                         <h1 class="wow animate__animated animate__fadeInLeft" data-wow-delay="1s">Soluciones sobre Ciberseguridad</h1>
                         <p class="wow animate__animated animate__fadeInRight" data-wow-delay="1s">SpyoSecure es un nuevo equipo de ciberseguridad que le ayudará a mantenerse a salvo en línea contra hackers y estafadores. Estamos aquí para proteger sus contraseñas y sus datos personales.</p>
                         <div class="banner-btn wow animate__animated animate__fadeInUp" data-wow-delay="1s">
