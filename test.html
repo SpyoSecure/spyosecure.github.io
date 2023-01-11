@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scammer Report</title>
+    <style>
+      /* Add some basic styling for the page */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+      }
+      
+      /* Style for the main container */
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* Style for the form elements */
+      label, input[type="text"], textarea {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      /* Style for the submit button */
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      
+      /* Style for the error message */
+      .error {
+        color: red;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Report a Scammer</h1>
+      <form action="/" method="post" enctype="multipart/form-data">
+        <label for="name">Name of Scammer:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email of Scammer:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="description">Description of Scam:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label for="picture">Upload a picture of the scammer (optional):</label>
+        <input type="file" id="picture" name="picture">
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
