@@ -798,115 +798,245 @@
 
     <!-- Jquery Min JS -->
     <script>
-        function scanWebsite() {
-          // Get the URL from the input field
-          var url = document.getElementById("url").value;
-  
-          // Check if the URL is on the Scam websites list
-          if (ScamWebsites.includes(url)) {
-            // Display a message indicating that the website is not safe
-            document.getElementById("result").innerHTML =
-            "<span class='unsafe'>❌ Diese Website ist nicht sicher.</span>";
-        } else {
-            // Display a message indicating that the website is safe
-            document.getElementById("result").innerHTML =
-            "<span class='safe'>✅ Diese Website ist sicher.</span>";
-          }
-        }
+function scanWebsite() {
+    // URL aus dem Eingabefeld holen
+    var url = document.getElementById("url").value;
+
+    // Regulärer Ausdruck zur Validierung der URL
+    var urlPattern = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+    
+    // Überprüfen, ob der eingegebene Text eine gültige URL ist
+    if (!urlPattern.test(url)) {
+        document.getElementById("result").innerHTML = "<span class='error'>⚠️ Bitte geben Sie eine gültige URL ein.</span>";
+        return;
+    }
+
+    // Überprüfen, ob die URL auf der Liste der betrügerischen Websites steht
+    if (ScamWebsites.includes(url)) {
+        // Eine Nachricht anzeigen, die darauf hinweist, dass die Website nicht sicher ist
+        document.getElementById("result").innerHTML = "<span class='unsafe'>❌ Diese Website ist nicht sicher.</span>";
+    } else {
+        // Eine Nachricht anzeigen, die darauf hinweist, dass die Website sicher ist
+        document.getElementById("result").innerHTML = "<span class='safe'>✅ Diese Website ist sicher.</span>";
+    }
+}
         
                 // List of Scam websites
-                var ScamWebsites = ["https://freedomgiveaway.net", "freedomgiveaway.net",
-        "101nitro.com", "http://ww38.101nitro.com", "1111sale.us", "https://1111sale.us", "http://15dfjkbvdf.club", "15dfjkbvdf.club", "17ebook.com",
-
-        "http://www1.17ebook.com", "1month-premium.com", "https://1month-premium.com", "1nitro.club",
-
-        "https://1nitro.club", "1ownandfresh1.com", "https://ww16.1ownandfresh1.com", "1payxperxinst1.com", "https://1payxperxinst1.com", "1redirb.com",
-
-        "https://1redirb.com", "https://ww25.1redirb.com", "adalgard-wol.com", "adating.link",
-
-        "zvideo-live.com", "https://simcast.com", "streamcommunits.ru", "http://streamcommunits.ru", "streamcommunitty.ru.com", "https://streamcommunitty.ru.com",
-
-        "streamcommunitu.com", "https://streamcommunitu.com", "streamcommunitv.me", "https://streamcommunitv.me", "streamcommunitv.net", "https://streamcommunitv.net",
-
-        "streamcommunity-user.me", "https://streamcommunity-user.me", "streamcommunity.com.ru",
-
-        "http://streamcommunity.com.ru", "zoneforyourprize.life", "https://ww1.zoneforyourprize.life",
-
-        "zondervirus.nl", "https://zondervirus.nl", "youtubeshort.watch", "https://youtubeshort.watch", "youtuba.com", "https://ww1.youtuba.com",
-
-        "your-bonus.ecl8hr4lalq5.top", "https://your-bonus.ecl8hr4lalq5.top", "your-dreams-girls2.com", "http://ww38.your-dreams-girls2.com",
-
-        "http://adating.link", "discocrd.com", "http://ww9.discocrd.com",
-
-        "discod.tech", "http://discod.tech", "discodapp.com", "http://ww25.discodapp.com", "discord-drop.info", "http://discord-drop.info",
-
-        "discord-drops.xyz", "http://discord-drops.xyz", "ur-l.me", "https://simcast.com", "v-roblox.com",
-
-        "http://v-roblox.com", "v2013.ru", "http://v2013.ru", "valve-nitro.xyz", "https://valve-nitro.xyz", "vid-adblocker.com",
-
-        "https://vid-adblocker.com", "vitality-playtime.com", "https://vitality-playtime.com", "vote-academymod.com", "https://vote-academymod.com",
-
-        "vote-moderator.com", "http://vote-moderator.com", "web-discord.com", "http://web-discord.com", "https://disccrdpremium.com/egiftfreesteamnitro",
-
-        "disccrdpremium.com", "msi-afterburner--download.site", "https://msi-afterburner--download.site",
-
-        "msi-afterburner-download.site", "http://msi-afterburner-download.site", "msi-afterburner-download.tech", "http://msi-afterburner-download.tech",
-
-        "msi-afterburner-download.online", "http://msi-afterburner-download.online", "msi-afterburner-download.store", "https://msi-afterburner-download.store",
-
-        "msi-afterburner-download.ru", "https://msi-afterburner-download.ru", "msi-afterburner.download", "http://msi-afterburner.download",
-
-        "mslafterburners.com", "http://mslafterburners.com", "msi-afterburnerr.com", "http://msi-afterburnerr.com", "https://clay.party/", "clay.party",
-
-        "https://turompecabezas.xyz", "turompecabezas.xyz", "https://mega.nz/file/LKAngKTD#ez0Zzzt4GyMFLBiVS_9MtIYyFZpsyQjzfq8T0uy_wXI",
-
-        "https://discoldgiftss.ru/reg", "https://discoldgiftss.ru", "discoldgiftss.ru", "https://discorclgift.ru/nitro",
-
-        "https://discorclgift.ru", "https://discorclgift.ru", "discorclgift.ru", "https://app-gift.ru/discord/nitro/reg",
-
-        "https://app-gift.ru", "app-gift.ru", "https://fabuloustwin.com/prom/341/", "https://fabuloustwin.com/prom/",
-
-        "https://fabuloustwin.com", "fabuloustwin.com", "https://teslanewyear.io", "teslanewyear.io", "https://tsla23.com", "tsla23.com",
-
-    "https://tesla2k23.com", "tesla2k23.com", "https://musk22-ceo.com", "musk22-ceo.com", "https://2xtsla.org", "2xtsla.org",
-
-"https://newtesla.pro", "newtesla.pro", "https://teslarewards.org", "teslarewards.org", "https://discord-snow.com/nitro",
-
-"https://discord-snow.com", "discord-snow.com/nitro", "discord-snow.com", "https://csgo-get.com/code#main", "https://csgo-get.com/code",
-
-"https://csgo-get.com/", "https://csgo-get.com", "csgo-get.com", "https://mytesla2023.com", "mytesla2023.com", "https://mytesla2023.com/",
-
-"https://mrbeast-btc.com", "mrbeast-btc.com", "https://csgg-case.com/code", "https://csgg-case.com/", "https://csgg-case.com",
-
-"csgg-case.com", "https://csdrop-gg.com/code#main", "https://csdrop-gg.com/code", "https://csdrop-gg.com/", "https://csdrop-gg.com",
-
-"csdrop-gg.com", "https://dlscord-nitro.com", "dlscord-nitro.com", "https://cutt.us/giftdiscord", "cutt.us/giftdiscord",
-
-"https://cutt.us/", "https://cutt.us", "cutt.us", "https://obsproicet.net", "obsproicet.net", "https://beacons.ai/clownxiaorn",
-
-"https://beacons.ai/", "https://beacons.ai", "beacons.ai", "beacons.ai/clownxiaorn", "https://beacons.ai/izzland",
-
-"beacons.ai/izzland", "http://shieldsrobux.com", "shieldsrobux.com", "https://cutt.us/get-fullnitro-discord", 
-
-"get-fullnitro-discord", "https://web-telegrarn.com/onlyfans18", "https://goldsoftware.vip/", "https://goldsoftware.vip",
-
-"goldsoftware.vip", "https://discord.gg/anastasyy", "https://cutt.us/dlscordpremium", "https://dlscord-nltro.com",
-
-"dlscord-nltro.com", "https://winningarts.xyz/", "https://winningarts.xyz", "winningarts.xyz", "https://metawingiveaway.space/",
-
-"https://metawingiveaway.space", "metawingiveaway.space", "https://nftcreator-online.space/", "https://nftcreator-online.space",
-
-"nftcreator-online.space", "https://nftcreateonline.com/", "https://nftcreateonline.com", "nftcreateonline.com",
-
-"https://freedisclord.com/GiveAway", "https://freedisclord.com/", "https://freedisclord.com", "freedisclord.com", "freedisclord.com/GiveAway",
-
-"https://discord.gg/Pct9bcar4G", "https://discord.gg/family-main", "https://discord.gg/Vm2RwraURb", "https://lolz.guru",
-
-"lolz.guru", "https://disccrdpremium.com/egiftfreesteamnitro", "https://disccrdpremium.com/", "https://disccrdpremium.com",
-
-"disccrdpremium.com", "disccrdpremium.com/egiftfreesteamnitro", 
-
-"companyforyouthsome.com",
+                var ScamWebsites = [    "https://freedomgiveaway.net",
+    "https://freedomgiveaway.net/",
+    "freedomgiveaway.net",
+    "101nitro.com",
+    "http://ww38.101nitro.com",
+    "1111sale.us",
+    "http://www1.17ebook.com",
+    "https://1111sale.us",
+    "http://15dfjkbvdf.club",
+    "15dfjkbvdf.club",
+    "17ebook.com",
+    "http://www1.17ebook.com",
+    "1month-premium.com",
+    "https://1month-premium.com",
+    "1nitro.club",
+    "https://1nitro.club",
+    "1ownandfresh1.com",
+    "https://ww16.1ownandfresh1.com",
+    "1payxperxinst1.com",
+    "https://1payxperxinst1.com",
+    "1redirb.com",
+    "https://1redirb.com",
+    "qfind.net",
+    "https://ww25.1redirb.com",
+    "adalgard-wol.com",
+    "adating.link",
+    "zvideo-live.com",
+    "https://simcast.com",
+    "streamcommunits.ru",
+    "http://streamcommunits.ru",
+    "streamcommunitty.ru.com",
+    "https://streamcommunitty.ru.com",
+    "streamcommunitu.com",
+    "https://streamcommunitu.com",
+    "streamcommunitv.me",
+    "https://streamcommunitv.me",
+    "streamcommunitv.net",
+    "https://streamcommunitv.net",
+    "streamcommunity-user.me",
+    "https://streamcommunity-user.me",
+    "streamcommunity.com.ru",
+    "http://streamcommunity.com.ru",
+    "zoneforyourprize.life",
+    "https://ww1.zoneforyourprize.life",
+    "zondervirus.nl",
+    "https://zondervirus.nl",
+    "youtubeshort.watch",
+    "https://youtubeshort.watch",
+    "youtuba.com",
+    "https://ww1.youtuba.com",
+    "your-bonus.ecl8hr4lalq5.top",
+    "https://your-bonus.ecl8hr4lalq5.top",
+    "your-dreams-girls2.com",
+    "http://ww38.your-dreams-girls2.com",
+    "http://adating.link",
+    "discocrd.com",
+    "http://ww9.discocrd.com",
+    "discod.tech",
+    "http://discod.tech",
+    "discodapp.com",
+    "http://ww25.discodapp.com",
+    "discord-drop.info",
+    "http://discord-drop.info",
+    "discord-drops.xyz",
+    "http://discord-drops.xyz",
+    "ur-l.me",
+    "https://simcast.com",
+    "v-roblox.com",
+    "http://v-roblox.com",
+    "v2013.ru",
+    "http://v2013.ru",
+    "valve-nitro.xyz",
+    "https://valve-nitro.xyz",
+    "vid-adblocker.com",
+    "https://vid-adblocker.com",
+    "vitality-playtime.com",
+    "https://vitality-playtime.com",
+    "vote-academymod.com",
+    "https://vote-academymod.com",
+    "vote-moderator.com",
+    "http://vote-moderator.com",
+    "web-discord.com",
+    "http://web-discord.com",
+    "https://disccrdpremium.com/egiftfreesteamnitro",
+    "disccrdpremium.com",
+    "msi-afterburner--download.site",
+    "https://msi-afterburner--download.site",
+    "msi-afterburner-download.site",
+    "http://msi-afterburner-download.site",
+    "msi-afterburner-download.tech",
+    "http://msi-afterburner-download.tech",
+    "msi-afterburner-download.online",
+    "http://msi-afterburner-download.online",
+    "msi-afterburner-download.store",
+    "https://msi-afterburner-download.store",
+    "msi-afterburner-download.ru",
+    "https://msi-afterburner-download.ru",
+    "msi-afterburner.download",
+    "http://msi-afterburner.download",
+    "mslafterburners.com",
+    "http://mslafterburners.com",
+    "msi-afterburnerr.com",
+    "http://msi-afterburnerr.com",
+    "https://clay.party/",
+    "clay.party",
+    "https://turompecabezas.xyz",
+    "turompecabezas.xyz",
+    "https://mega.nz/file/LKAngKTD#ez0Zzzt4GyMFLBiVS_9MtIYyFZpsyQjzfq8T0uy_wXI",
+    "https://discoldgiftss.ru/reg",
+    "https://discoldgiftss.ru",
+    "discoldgiftss.ru",
+    "https://discorclgift.ru/nitro",
+    "https://discorclgift.ru",
+    "https://discorclgift.ru",
+    "discorclgift.ru",
+    "https://app-gift.ru/discord/nitro/reg",
+    "https://app-gift.ru",
+    "app-gift.ru",
+    "https://fabuloustwin.com/prom/341/",
+    "https://fabuloustwin.com/prom/",
+    "https://fabuloustwin.com",
+    "fabuloustwin.com",
+    "https://teslanewyear.io",
+    "teslanewyear.io",
+    "https://tsla23.com",
+    "tsla23.com",
+    "https://tesla2k23.com",
+    "tesla2k23.com",
+    "https://musk22-ceo.com",
+    "musk22-ceo.com",
+    "https://2xtsla.org",
+    "2xtsla.org",
+    "https://newtesla.pro",
+    "newtesla.pro",
+    "https://teslarewards.org",
+    "teslarewards.org",
+    "https://discord-snow.com/nitro",
+    "https://discord-snow.com",
+    "discord-snow.com/nitro",
+    "discord-snow.com",
+    "https://csgo-get.com/code#main",
+    "https://csgo-get.com/code",
+    "https://csgo-get.com/",
+    "https://csgo-get.com",
+    "csgo-get.com",
+    "https://mytesla2023.com",
+    "mytesla2023.com",
+    "https://mytesla2023.com/",
+    "https://mrbeast-btc.com",
+    "mrbeast-btc.com",
+    "https://csgg-case.com/code",
+    "https://csgg-case.com/",
+    "https://csgg-case.com",
+    "csgg-case.com",
+    "https://csdrop-gg.com/code#main",
+    "https://csdrop-gg.com/code",
+    "https://csdrop-gg.com/",
+    "https://csdrop-gg.com",
+    "csdrop-gg.com",
+    "https://dlscord-nitro.com",
+    "dlscord-nitro.com",
+    "https://cutt.us/giftdiscord",
+    "cutt.us/giftdiscord",
+    "https://cutt.us/",
+    "https://cutt.us",
+    "cutt.us",
+    "https://obsproicet.net",
+    "obsproicet.net",
+    "https://beacons.ai/clownxiaorn",
+    "https://beacons.ai/",
+    "https://beacons.ai",
+    "beacons.ai",
+    "beacons.ai/clownxiaorn",
+    "https://beacons.ai/izzland",
+    "beacons.ai/izzland",
+    "http://shieldsrobux.com",
+    "shieldsrobux.com",
+    "https://cutt.us/get-fullnitro-discord",
+    "get-fullnitro-discord",
+    "https://web-telegrarn.com/onlyfans18",
+    "https://goldsoftware.vip/",
+    "https://goldsoftware.vip",
+    "goldsoftware.vip",
+    "https://discord.gg/anastasyy",
+    "https://cutt.us/dlscordpremium",
+    "https://dlscord-nltro.com",
+    "dlscord-nltro.com",
+    "https://winningarts.xyz/",
+    "https://winningarts.xyz",
+    "winningarts.xyz",
+    "https://metawingiveaway.space/",
+    "https://metawingiveaway.space",
+    "metawingiveaway.space",
+    "https://nftcreator-online.space/",
+    "https://nftcreator-online.space",
+    "nftcreator-online.space",
+    "https://nftcreateonline.com/",
+    "https://nftcreateonline.com",
+    "nftcreateonline.com",
+    "https://freedisclord.com/GiveAway",
+    "https://freedisclord.com/",
+    "https://freedisclord.com",
+    "freedisclord.com",
+    "freedisclord.com/GiveAway",
+    "https://discord.gg/Pct9bcar4G",
+    "https://discord.gg/family-main",
+    "https://discord.gg/Vm2RwraURb",
+    "https://lolz.guru",
+    "lolz.guru",
+    "https://disccrdpremium.com/egiftfreesteamnitro",
+    "https://disccrdpremium.com/",
+    "https://disccrdpremium.com",
+    "disccrdpremium.com",
+    "disccrdpremium.com/egiftfreesteamnitro",
+    "companyforyouthsome.com",
     "http://ww1.companyforyouthsome.com/",
     "http://ww1.companyforyouthsome.com",
     "ww1.companyforyouthsome.com",
@@ -1001,44 +1131,81 @@
     "http://iyfbodn.com/",
     "http://ww1.zybzquz.com",
     "ww1.zybzquz.com",
-
-    "https://steanmconmimnity.com/1050995648411", "https://steanmconmimnity.com/", "https://steanmconmimnity.com", "steanmconmimnity.com",
-
-    "steanmconmimnity.com/1050995648411", "https://steanmcommimnity.com/1056348875254", "steanmcommimnity.com/1056348875254",
-
-    "https://formulgite.xyz", "formulgite.xyz", "https://formulgite.xyz/", "https://steanmcommimnity.com/105397209182",
-
-    "https://steanmconmminity.com/1053499764165", "https://lfodrop.pw", "lfodrop.pw", "https://steanmcommumnity.com/149963491374",
-
-    "https://steanmscommimnity.com/105495204362", "https://getstengft.com/giftcard", "https://getstengft.com/",
-
-    "https://getstengft.com", "getstengft.com", "getstengft.com/giftcard", "https://steamcomnmunltly.com/67951531824932",
-
-    "https://steamcommumillty.com/982138931256", "https://fublilskin.com/r/1", "https://fublilskin.com/r/",
-
-    "https://fublilskin.com/", "https://fublilskin.com", "fublilskin.com", "https://steamcomnmunltly.com/430294902943",
-
-    "https://steamcomnmunltly.com/9838921489241", "https://steamcomnmunltly.com/090190230953409", "https://ofcmdrop.pw",
-    
-    "ofcmdrop.pw", "http://vnebi.com/", "http://vnebi.com", "vnebi.com", "http://www.twitchdiscord.com/", 
-
-    "http://www.twitchdiscord.com", "www.twitchdiscord.com", "twitchdiscord.com", "steqmcommunity.com",
-
-    "http://steomcommunity.com/", "http://steomcommunity.com", "http://capcut-freedownload.com", "capcut-freedownload.com",
-
-    "http://capcutfreedownload.com", "capcutfreedownload.com", "https://capcut-editor-video.com/", "https://capcut-editor-video.com",
-
-    "capcut-editor-video.com", "http://capcutdownload.com", "capcutdownload.com", "http://capcutpc-download.com", "capcutpc-download.com",
-
-    "https://huntakes.monster", "huntakes.monster", "https://easynltro.com/getpremium", "https://easynltro.com", "easynltro.com",
-
-    "easynltro.com/getpremium", "https://easynltro.com/getpremium#", "easynltro.com/getpremium#", "https://highaccuracy.space",
-
-    "highaccuracy.space", "https://takefullnitro.com/get-gift", "takefullnitro.com/get-gift", "takefullnitro.com",
-
-    "takefullnitro.com/", "https://takefullnitro.com/", "https://takefullnitro.com", "https://www.vrmbs.com", "www.vrmbs.com",
-
-    "vrmbs.com", "https://prizenroll.com", "prizenroll.com",]
+    "https://steanmconmimnity.com/1050995648411",
+    "https://steanmconmimnity.com/",
+    "https://steanmconmimnity.com",
+    "steanmconmimnity.com",
+    "steanmconmimnity.com/1050995648411",
+    "https://steanmcommimnity.com/1056348875254",
+    "steanmcommimnity.com/1056348875254",
+    "https://formulgite.xyz",
+    "formulgite.xyz",
+    "https://formulgite.xyz/",
+    "https://steanmcommimnity.com/105397209182",
+    "https://steanmconmminity.com/1053499764165",
+    "https://lfodrop.pw",
+    "lfodrop.pw",
+    "https://steanmcommumnity.com/149963491374",
+    "https://steanmscommimnity.com/105495204362",
+    "https://getstengft.com/giftcard",
+    "https://getstengft.com/",
+    "https://getstengft.com",
+    "getstengft.com",
+    "getstengft.com/giftcard",
+    "https://steamcomnmunltly.com/67951531824932",
+    "https://steamcommumillty.com/982138931256",
+    "https://fublilskin.com/r/1",
+    "https://fublilskin.com/r/",
+    "https://fublilskin.com/",
+    "https://fublilskin.com",
+    "fublilskin.com",
+    "https://steamcomnmunltly.com/430294902943",
+    "https://steamcomnmunltly.com/9838921489241",
+    "https://steamcomnmunltly.com/090190230953409",
+    "https://ofcmdrop.pw",
+    "ofcmdrop.pw",
+    "http://vnebi.com/",
+    "http://vnebi.com",
+    "vnebi.com",
+    "http://www.twitchdiscord.com/",
+    "http://www.twitchdiscord.com",
+    "www.twitchdiscord.com",
+    "twitchdiscord.com",
+    "steqmcommunity.com",
+    "http://steomcommunity.com/",
+    "http://steomcommunity.com",
+    "http://capcut-freedownload.com",
+    "capcut-freedownload.com",
+    "http://capcutfreedownload.com",
+    "capcutfreedownload.com",
+    "https://capcut-editor-video.com/",
+    "https://capcut-editor-video.com",
+    "capcut-editor-video.com",
+    "http://capcutdownload.com",
+    "capcutdownload.com",
+    "http://capcutpc-download.com",
+    "capcutpc-download.com",
+    "https://huntakes.monster",
+    "huntakes.monster",
+    "https://easynltro.com/getpremium",
+    "https://easynltro.com",
+    "easynltro.com",
+    "easynltro.com/getpremium",
+    "https://easynltro.com/getpremium#",
+    "easynltro.com/getpremium#",
+    "https://highaccuracy.space",
+    "highaccuracy.space",
+    "https://takefullnitro.com/get-gift",
+    "takefullnitro.com/get-gift",
+    "takefullnitro.com",
+    "takefullnitro.com/",
+    "https://takefullnitro.com/",
+    "https://takefullnitro.com",
+    "https://prizenroll.com",
+    "prizenroll.com",
+    "https://www.vrmbs.com/",
+    "www.vrmbs.com",
+    "vrmbs.com"]
       </script>
 
 
