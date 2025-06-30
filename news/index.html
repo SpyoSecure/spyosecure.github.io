@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <title>SpyoSecure News</title>
+  <script>
+    // Redirect /news (no slash) to /news/ (with slash) to avoid relative path issues
+    if (window.location.pathname === '/news') {
+      window.location.replace('/news/');
+    }
+  </script>
   <style>
     body {
       background-color: #0a0a0a;
@@ -29,11 +35,6 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-    }
-    .news-image {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
     }
     .news-content {
       padding: 20px;
@@ -70,7 +71,15 @@
   </div>
 
   <script>
-    fetch('/news/news.json')
+    function getNewsJsonPath() {
+      const path = window.location.pathname;
+      if (path.endsWith('/news/') || path.endsWith('/news')) {
+        return 'news.json';  // Fetch relative to current folder
+      }
+      return '/news/news.json'; // fallback absolute path
+    }
+
+    fetch(getNewsJsonPath())
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById('news-container');
