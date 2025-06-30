@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RuskiNet targets COMTEL in DDoS attack</title>
+  <title>SpyoSecure News</title>
   <style>
     body {
       background-color: #0a0a0a;
@@ -12,66 +12,84 @@
       color: #ffffff;
     }
     .container {
-      max-width: 800px;
+      width: 95%;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 0 20px;
     }
     h1 {
+      text-align: center;
       color: #00ffcc;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-    .meta {
-      color: #999;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    img {
-      width: 350px;
-      max-width: 100%;
-      border-radius: 5px;
-      margin-right: 20px;
-      margin-bottom: 20px;
-    }
-    .article-body {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #dddddd;
-      flex: 1;
-    }
-    .article-flex {
+    .news-card {
+      background: #121212;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 12px rgba(0,255,204,0.1);
+      overflow: hidden;
       display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: flex-start;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
-    @media (max-width: 600px) {
-      .article-flex {
-        flex-direction: column;
-      }
-      img {
-        width: 100%;
-        margin-right: 0;
-      }
+    .news-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
+    .news-content {
+      padding: 20px;
+    }
+    .news-title {
+      font-size: 22px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .news-desc {
+      font-size: 15px;
+      color: #cccccc;
+      margin-bottom: 15px;
+    }
+    .read-more {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .read-more:hover {
+      background: #00ddb3;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>RuskiNet targets Israeli company COMTEL in DDoS attack</h1>
-    <div class="meta">Category: Attack | Author: SpyoSecure | June 30, 2025 | 2:45 AM</div>
-    <div class="article-flex">
-      <img src="https://i.ibb.co/jvT1n2Lq/d403add33cf13ef7e465d8a2efd65817.png" alt="Attack image" />
-      <div class="article-body">
-        The pro-Palestinian hacking group <strong>RuskiNet</strong> has claimed responsibility for a Distributed Denial of Service (DDoS) attack targeting <strong>COMTEL ISRAEL Electronic Solutions Ltd.</strong>, a private Israeli electronics company. <br><br>
-
-According to the group, the attack briefly brought down the COMTEL website, making it inaccessible to users. COMTEL, based in Kfar Saba, Israel, has not issued any public statement in response. <br><br>
-
-RuskiNet cited support for Palestine as the motivation behind the attack, continuing a pattern of politically driven cyber activity amid the ongoing conflict. <br><br>
-
-As of now, the COMTEL website appears to be back online. SpyoSecure will continue monitoring for further developments or additional cyber campaigns linked to RuskiNet.
-      </div>
-    </div>
+    <h1>📰 SpyoSecure Cyber News</h1>
+    <div id="news-container">Loading...</div>
   </div>
+
+  <script>
+    fetch('news.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('news-container');
+        container.innerHTML = ''; // Clear loading text
+        data.forEach(item => {
+          container.innerHTML += `
+            <div class="news-card">
+              <div class="news-content">
+                <h2 class="news-title">${item.title}</h2>
+                <p class="news-desc">${item.description.slice(0, 200)}...</p>
+                <a class="read-more" href="https://spyosecure.xyz/news/${item.slug}/">Read Full Article</a>
+              </div>
+            </div>
+          `;
+        });
+      })
+      .catch(() => {
+        document.getElementById('news-container').innerHTML = '<p>Error loading news.</p>';
+      });
+  </script>
 </body>
 </html>
