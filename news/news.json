@@ -1,6 +1,17 @@
 [
   {
   "category": "Leak",
+  "image": "https://i.ibb.co/PGXkPGDk/bf7370e07437beb0fd60edd2a7ccf394.jpg",
+  "title": "RuskiNet leaks personal data from Weisslaw.co.il",
+  "slug": "ruskinet-weisslaw-data-leak",
+  "author": "SpyoSecure",
+  "date": "July 5, 2025",
+  "time": "11:07 PM",
+  "description": "Hacking group <strong>RuskiNet</strong> claims to have leaked 3,000+ lines of personal data from <strong>Weisslaw.co.il</strong>, exposing names, IPs, emails, addresses, and phone numbers."
+  },
+
+  {
+  "category": "Leak",
   "image": "https://i.ibb.co/vxQH8Mb2/30f3f28fbfad7da9e92f0edc4d103592.png",
   "title": "300,000 McDonald's logins allegedly leaked by xCapuche1337",
   "slug": "mcdonalds-300k-login-leak",
