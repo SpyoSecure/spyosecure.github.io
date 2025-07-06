@@ -1,5 +1,16 @@
 [
   {
+  "category": "Attack",
+  "image": "https://i.ibb.co/first-image.png",
+  "title": "Hacker group Inteid claims multiple Amazon website outages",
+  "slug": "inteid-multi-amazon-ddos-attack",
+  "author": "SpyoSecure",
+  "date": "July 6, 2025",
+  "time": "7:21 PM",
+  "description": "The hacker group <strong>Inteid</strong> has claimed responsibility for several Distributed Denial of Service (DDoS) attacks against Amazon's regional websites.<br><br>On July 2, Inteid announced they took down <strong>amazon.de</strong>.<br>On July 6, they claimed to have taken down both <strong>amazon.co.jp</strong> and <strong>amazon.com.br</strong>.<br><br>No official reason for the attacks has been stated by the group or Amazon."
+},
+
+  {
   "category": "Defacement",
   "image": "https://i.ibb.co/q0p1Jxz/deface-tamam.png",
   "title": "Liwaa Mohammad claims defacement of tamam-c.sa",
