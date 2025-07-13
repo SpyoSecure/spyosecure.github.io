@@ -1,5 +1,16 @@
 [
   {
+  "category": "Malware",
+  "image": "https://i.ibb.co/Xxtrzj6V/Malware-Warning.jpg",
+  "title": "Fake VPN on GitHub hides Lumma Stealer malware",
+  "slug": "fake-vpn-on-github-hides-lumma-stealer-malware",
+  "author": "SpyoSecure",
+  "date": "July 13, 2025",
+  "time": "8:32 PM",
+  "description": "A dangerous fake VPN promoted on GitHub has been found to spread a stealthy malware called Lumma Stealer. The dropper uses Windows tools like MSBuild.exe to silently infect systems and avoid detection. SpyoSecure warns users to avoid unofficial software from untrusted sources."
+  },
+
+  {
   "category": "Attack",
   "image": "https://i.ibb.co/first-image.png",
   "title": "Hacker group Inteid claims multiple Amazon website outages",
