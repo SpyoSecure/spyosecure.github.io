@@ -1,6 +1,17 @@
 [
 
   {
+  "category": "VPN Exposure",
+  "image": "https://i.ibb.co/9N2fKHF/kape-vpn-madcap.png",
+  "title": "MadCap exposes VPN firms linked to Israel Intelligence",
+  "slug": "madcap-exposes-kape-vpns-israel-intel",
+  "author": "SpyoSecure",
+  "date": "July 29, 2025",
+  "time": "8:33 PM.",
+  "description": "Pro-Palestinian hacker group MadCap reveals that popular VPNs like ExpressVPN and CyberGhost are owned by a company with links to Israel Intelligence. They urge users to avoid them and recommend switching to trusted providers like Mullvad VPN."
+  },
+
+  {
   "category": "Account Hack",
   "image": "https://i.ibb.co/zV57Q1RC/Flag-of-Missouri.png",
   "title": "DieNet hacktivists target Missouri Deputy Sheriff Gabriel Woods",
