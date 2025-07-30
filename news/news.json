@@ -1,6 +1,17 @@
 [
 
   {
+  "category": "Data Breach",
+  "image": "https://i.ibb.co/6nRWhbz/tea-app-breach.png",
+  "title": "Tea App Breach Exposes Photos and Private Posts",
+  "slug": "tea-app-breach-exposes-user-data",
+  "author": "SpyoSecure",
+  "date": "July 31, 2025",
+  "time": "12:07 AM.",
+  "description": "The women focused dating safety app Tea has suffered a major security incident exposing over one hundred thousand private images and user content from its database including ID verification photos and private messages submitted before February 2024."
+  },
+
+  {
   "category": "VPN Exposure",
   "image": "https://i.ibb.co/9N2fKHF/kape-vpn-madcap.png",
   "title": "MadCap exposes VPN firms linked to Israel Intelligence",
